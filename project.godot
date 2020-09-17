@@ -30,6 +30,10 @@ config/name="word"
 run/main_scene="res://scenes/GUI.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Dico="*res://scripts/Dico.gd"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

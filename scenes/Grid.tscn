@@ -19,8 +19,5 @@ __meta__ = {
 }
 
 [node name="DropTimer" type="Timer" parent="."]
-
-[node name="PopTimer" type="Timer" parent="."]
-wait_time = 2.0
+[connection signal="ground_touched" from="GridContainer" to="GridContainer" method="_on_ground_touched"]
 [connection signal="timeout" from="DropTimer" to="GridContainer" method="_on_DropTimer_timeout"]
-[connection signal="timeout" from="PopTimer" to="GridContainer" method="_on_PopTimer_timeout"]
