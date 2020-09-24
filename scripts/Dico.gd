@@ -20,25 +20,28 @@ func _init() -> void:
 		file.close()
 
 
-func get_words_with_common_letters(reference_word:String, words_count:int, common_letters_count:int) -> Array:
+func get_words_with_common_letters(reference_word:String, words_count:int, common_letters_count:int, word_max_size = 6) -> Array:
 	var words_to_return = []
 	
 	while words_to_return.size() < words_count:
 		var tested_word = get_random_word().to_upper()
-		print("Testing ", tested_word, "...")
-		if tested_word.length() >= common_letters_count:
-			var clc = 0
-			for c in reference_word.to_upper():
-				if tested_word.count(c) > 0:
-					clc+= 1
-			if clc >= common_letters_count:
-				words_to_return.append(tested_word)
-				print("\t-> Accepted")
-			else:
-				print("\t-> Rejected cause only have ", clc, " out of ", common_letters_count, " expected common letters")
-		else:
-			print("Rejected because too short.")	
-	
+#		print("Testing ", tested_word, "...")
+		if tested_word.length() <= word_max_size:
+			if tested_word.length() >= common_letters_count:
+				var clc = 0
+				for c in reference_word.to_upper():
+					if tested_word.count(c) > 0:
+						clc+= 1
+				if clc >= common_letters_count:
+					words_to_return.append(tested_word)
+#					print("\t-> Accepted")
+#				else:
+#					print("\t-> Rejected cause only have ", clc, " out of ", common_letters_count, " expected common letters")
+#			else:
+#				print("Rejected because too short.")	
+#		else:
+#			print("Rejected because to long")
+#
 	return words_to_return
 	
 	

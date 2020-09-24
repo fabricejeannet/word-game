@@ -12,12 +12,13 @@ modulate = Color( 0.819608, 0.729412, 0.239216, 1 )
 margin_right = 196.0
 margin_bottom = 150.0
 rect_min_size = Vector2( 100, 150 )
-columns = 6
+columns = 10
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="DropTimer" type="Timer" parent="."]
+wait_time = 0.5
 [connection signal="ground_touched" from="GridContainer" to="GridContainer" method="_on_ground_touched"]
 [connection signal="timeout" from="DropTimer" to="GridContainer" method="_on_DropTimer_timeout"]
