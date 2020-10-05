@@ -10,18 +10,18 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Label",
-"class": "Case",
+"class": "Cell",
 "language": "GDScript",
-"path": "res://scripts/Case.gd"
+"path": "res://scripts/Cell.gd"
 }, {
 "base": "Node2D",
-"class": "Cases",
+"class": "Cells",
 "language": "GDScript",
-"path": "res://scripts/Cases.gd"
+"path": "res://scripts/Cells.gd"
 } ]
 _global_script_class_icons={
-"Case": "",
-"Cases": ""
+"Cell": "",
+"Cells": ""
 }
 
 [application]

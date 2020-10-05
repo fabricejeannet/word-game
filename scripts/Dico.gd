@@ -45,6 +45,28 @@ func get_words_with_common_letters(reference_word:String, words_count:int, commo
 	return words_to_return
 	
 	
+#func get_words_with_common_syllable(reference_word:String, words_count:int, common_syllable_count:int, word_min_size = 6) -> Array:
+#	var words_to_return = []
+#
+#	while words_to_return.size() < words_count:
+#		var tested_word = get_random_word().to_upper()
+#		print("Testing ", tested_word, "...")
+#		if tested_word.length() >= word_min_size:
+#			var csc = 0
+#			for i in range (0, reference_word.length() - 2):
+#				var syllabe = reference_word.substr(i, 2)
+#				print("Looking for [", syllabe, "]")
+#				if tested_word.count(syllabe) > 0:
+#					csc+= 1
+#
+#			print("Found ", csc, " times")		
+#			if csc >= common_syllable_count:
+#				print ("[OK] ", tested_word, " added to list")
+#				words_to_return.append(tested_word)
+#			else:
+#				print ("[ERROR]", tested_word,  " rejected")
+##
+#	return words_to_return
 	
 func get_random_word() -> String:
 	var rng = RandomNumberGenerator.new()
